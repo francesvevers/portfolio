@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- jQuery src -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- jQuery Script -->
+    <script>
+        $(document).ready(function(){
+          $("#white-on-black").click(function(){
+            $("h1, h2, p").toggleClass("white-on-black");
+            $("h1, h2, p").removeClass("black-on-yellow");
+            $("h1, h2, p").removeClass("red-on-pink");
+          });
+
+          $("#black-on-yellow").click(function(){
+            $("h1, h2, p").toggleClass("black-on-yellow");
+            $("h1, h2, p").removeClass("white-on-black");
+            $("h1, h2, p").removeClass("red-on-pink");
+          });
+
+          $("#red-on-pink").click(function(){
+            $("h1, h2, p").toggleClass("red-on-pink");
+            $("h1, h2, p").removeClass("white-on-black");
+            $("h1, h2, p").removeClass("black-on-yellow");
+          });
+        });
+        </script>
+
+        <!-- Custom CSS -->
+        <style>
+        .white-on-black, #white-on-black {
+            color: #ffffff;
+            background-color: #000000;
+        }
+
+        .black-on-yellow, #black-on-yellow {
+            color: #000000;
+            background-color: #fff700;
+        }
+
+        .red-on-pink, #red-on-pink {
+            color: #FF0000;
+            background-color: #f6d1f2;
+        }
+        </style>
+  </head>
+  <body>
+    <div class="container text-center">
+        <div class="row py-5" id="instructions">
+            <h3>Press the buttons below to change how the text is displayed.  This may be helpful for different accessibility needs.  This page uses jQuery to add/remove CSS classes.</h3>
+        </div>
+        <div class="row justify-content-center py-5">
+            <div class="col">
+                <button type="button" class="btn" id="white-on-black">White text on Black background</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn" id="black-on-yellow">Black text on Yellow background</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn" id="red-on-pink">Red text on Pink background</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="p-5">
+                <h2>My horoscope for 11/12/23 from <a href="https://www.refinery29.com/en-us/horoscope" target="_blank">Refinery 29</a></h2>
+                <h1>Scorpio Sun & Rising:</h1>
+                <p>Scorpio, everything seems more serious now that Venus is in your sign and Mercury is in Capricorn. Fortunately, the Sag new moon on December 12 helps lighten things up, as it highlights your sector of self-esteem and finances, and encourages you to let your creativity flow more freely and without restriction. </p>
+                <p>If you’ve felt stuck in a rut or caught up in the rat race these past few weeks or months (particularly due to Mars, your ruling planet, being in Sag), this new moon will help you identify what beliefs may be keeping you stuck in this way of being. It’s as you change your thoughts that your life circumstances also change, and that’s the name of the game this new moon week. </p>
+            
+                <p>This may be easier read than done though, especially once Mercury begins its retrograde in Capricorn on December 13. Whatever new moon intentions you had previously set may feel like they’re experiencing delay after delay — but this is just an illusion. Mercury retrograde combined with Venus in Scorpio is here to help you learn to release the need to control everything and everyone. You’re not getting what you want instantaneously because there’s more than one path to receiving your desires, and they may not come in the exact format or packaging you expected. Learn to let go.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
